@@ -64,32 +64,32 @@ module.exports = {
     'iterm2',
     'little-snitch',
     'macbreakz',
-    'micro-snitch',
-    'signal',
+    //'micro-snitch',
+    //'signal',
     //'macvim',
-    'sizeup',
+    //'sizeup',
     //'sketchup',
-    'slack',
-    'the-unarchiver',
+    //'slack',
+    //'the-unarchiver',
     //'torbrowser',
     //'transmission',
-    'visual-studio-code',
+    //'visual-studio-code',
     //'vlc',
     'xquartz'
   ],
   gem: [
   ],
   npm: [
-    'antic',
-    'buzzphrase',
-    'eslint',
-    'instant-markdown-d',
+    // 'antic',
+    // 'buzzphrase',
+    // 'eslint',
+    // 'instant-markdown-d',
     // 'generator-dockerize',
     // 'gulp',
-    'npm-check-updates',
-    'prettyjson',
-    'trash',
-    'vtop'
+    // 'npm-check-updates',
+    // 'prettyjson',
+    // 'trash',
+    // 'vtop'
     // ,'yo'
   ]
 };
