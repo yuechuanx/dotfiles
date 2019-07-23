@@ -27,8 +27,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Plugin 'Valloric/YouCompleteMe'
 " Navigation (IDE frame)
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
@@ -50,9 +50,9 @@ Plugin 'millermedeiros/vim-esformatter'
 Plugin 'digitaltoad/vim-pug'
 " Plugin 'elzr/vim-json'
 " Plugin 'SirVer/ultisnips'
-"Plugin 'sheerun/vim-polyglot'
+" Plugin 'sheerun/vim-polyglot'
 " plugins from http://vim-scripts.org/vim/scripts.html
-Plugin 'node.js'
+" Plugin 'node.js'
 Plugin 'SuperTab'
 " Git plugin not hosted on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -67,7 +67,7 @@ Plugin 'SuperTab'
 " TypeScript
 " Plugin 'leafgarland/typescript-vim'
 " Vue.js
-Plugin 'posva/vim-vue'
+" Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -232,12 +232,12 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" map <up> <ESC>:bp<RETURN> " left arrow (normal mode) switches buffers
-" map <down> <ESC>:bn<RETURN> " right arrow (normal mode) switches buffers
-" map <right> <ESC>:Tlist<RETURN> " show taglist
-" map <left> <ESC>:NERDTreeToggle<RETURN>  " moves left fa split
-" map <F2> <ESC>ggVG:call SuperRetab()<left>
-" map <F12> ggVGg? " apply rot13 for people snooping over shoulder, good fun
+map <up> <ESC>:bp<RETURN> " left arrow (normal mode) switches buffers
+map <down> <ESC>:bn<RETURN> " right arrow (normal mode) switches buffers
+map <right> <ESC>:Tlist<RETURN> " show taglist
+map <left> <ESC>:NERDTreeToggle<RETURN>  " moves left fa split
+map <F2> <ESC>ggVG:call SuperRetab()<left>
+map <F12> ggVGg? " apply rot13 for people snooping over shoulder, good fun
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Useful abbrevs

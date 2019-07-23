@@ -36,6 +36,8 @@ export DISABLE_AUTO_TITLE="false"
 plugins=(
   colorize 
   compleat 
+  docker
+  docker-compose
   dirpersist 
   git 
   gulp 
@@ -43,10 +45,11 @@ plugins=(
   cp
   vscode
   tmux
+  timer
   osx
-  docker
-  docker-compose
   zsh_reload
+  z
+  zsh-navigation-tools
   zsh-syntax-highlighting
 )
 
@@ -74,57 +77,22 @@ unsetopt correct
 # set alias here
 alias clr='clear'
 alias zshconfig='code ~/.zshrc'
+alias chk-als='alias | grep '
 
-# ------------------------------------
-# Docker alias and function
-# ------------------------------------
 
-# Get latest container ID
-alias dl="docker ps -l -q"
+# commented out by conda initialize
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/xiaoy/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/xiaoy/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/xiaoy/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/xiaoy/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-# Get container process
-alias dps="docker ps"
-
-# Get process included stop container
-alias dpa="docker ps -a"
-
-# Get images
-alias di="docker images"
-
-# Get container IP
-alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-
-# Run deamonized container, e.g., $dkd base /bin/echo hello
-alias dkd="docker run -d -P"
-
-# Run interactive container, e.g., $dki base /bin/bash
-alias dki="docker run -i -t -P"
-
-# Execute interactive container, e.g., $dex base /bin/bash
-alias dex="docker exec -i -t"
-
-# Stop all containers
-dstop() { docker stop $(docker ps -a -q); }
-
-# Remove all containers
-drm() { docker rm $(docker ps -a -q); }
-
-# Stop and Remove all containers
-alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
-
-# Remove all images
-dri() { docker rmi $(docker images -q); }
-
-# Dockerfile build, e.g., $dbu tcnksm/test 
-dbu() { docker build -t=$1 .; }
-
-# Show all alias related docker
-dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
-
-# Bash into running container
-dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
-
-# set commands function
-function cd {
-  builtin cd "$@" && ls -F
-}

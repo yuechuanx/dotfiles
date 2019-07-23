@@ -6,3 +6,6 @@
 # npm
 0 5 * * *  npm update npm -g
 0 6 * * *  npm update -g
+# oh-my-zsh
+0 3 * * *  sh ~/.dotfiles/oh-my-zsh/tools/upgrade.sh
+

@@ -1,5 +1,5 @@
 #My Scripts
-export PATH=$PATH:.
+export PATH=$PATH:~/Scripts
 #export PATH=$PATH:~/.dotfiles/scripts
 
 #Brew
@@ -14,3 +14,6 @@ export PATH=/usr/local/bin:$PATH
 
 # The next line enables shell command completion for gcloud.
 #source "/Users/$(whoami)/Downloads/google-cloud-sdk/completion.zsh.inc"
+
+# Java Environment
+export PATH=$JAVA_HOME/bin:$PATH
