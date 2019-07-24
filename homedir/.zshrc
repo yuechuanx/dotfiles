@@ -34,12 +34,10 @@ export DISABLE_AUTO_TITLE="false"
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  compleat 
   docker
   docker-compose
   dirpersist 
   git 
-  gulp 
   history 
   cp
   vscode
@@ -74,7 +72,7 @@ unsetopt correct
 
 # set alias here
 alias clr='clear'
-alias zshconfig='code ~/.zshrc'
+alias zshconfig='vim ~/.zshrc'
 
 
 
