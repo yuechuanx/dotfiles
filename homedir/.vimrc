@@ -1,3 +1,6 @@
+let g:NERDTreeNodeDelimiter = "\u00a0"
+map  :silent! NERDTreeToggle
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Must Have
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,7 +28,7 @@ call vundle#begin()
 " Keep Plugin commands between vundle#begin/end.
 " let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 " Navigation (IDE frame)
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -48,7 +51,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
 Plugin 'millermedeiros/vim-esformatter'
 Plugin 'digitaltoad/vim-pug'
-" Plugin 'elzr/vim-json'
+Plugin 'elzr/vim-json'
 " Plugin 'SirVer/ultisnips'
 " Plugin 'sheerun/vim-polyglot'
 " plugins from http://vim-scripts.org/vim/scripts.html

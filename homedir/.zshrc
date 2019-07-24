@@ -34,7 +34,6 @@ export DISABLE_AUTO_TITLE="false"
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  colorize 
   compleat 
   docker
   docker-compose
@@ -45,10 +44,9 @@ plugins=(
   cp
   vscode
   tmux
-  timer
   osx
+  vi-mode
   zsh_reload
-  z
   zsh-navigation-tools
   zsh-syntax-highlighting
 )
@@ -77,7 +75,7 @@ unsetopt correct
 # set alias here
 alias clr='clear'
 alias zshconfig='code ~/.zshrc'
-alias chk-als='alias | grep '
+
 
 
 # commented out by conda initialize

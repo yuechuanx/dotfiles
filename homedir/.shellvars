@@ -31,3 +31,14 @@ export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 export NVM_DIR=~/.nvm
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+#########################################################################
+# Zsh plugin : Timer 
+#########################################################################
+export TIMER_FORMAT='[%d]'
+export TIMER_PRECISION=2
+
+#########################################################################
+# Zsh plugin : colorize
+#########################################################################
+ZSH_COLORIZE_STYLE="colorful"

@@ -155,12 +155,6 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/[
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
-# set commands function
-function cd {
-  builtin cd "$@" && ls -F
-}
-
-
 # ------------------------------------
 # Conda alias and function
 # ------------------------------------
@@ -177,4 +171,17 @@ alias tf='deact && conda activate tf'
 # ------------------------------------
 alias mmm='python manage.py makemigrations && python manage.py migrate'
 
-alias nv='nvim'
+
+# ------------------------------------
+# my alias and function
+# ------------------------------------
+# set commands function
+function cd {
+  builtin cd "$@" && ls -F
+}
+
+function mkcd {
+  /bin/mkdir "$@" && cd "$@"
+}
+
+alias chk-als='alias | grep '
