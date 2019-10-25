@@ -39,6 +39,6 @@ export TIMER_FORMAT='[%d]'
 export TIMER_PRECISION=2
 
 #########################################################################
-# Zsh plugin : colorize
+# Homebrew
 #########################################################################
-ZSH_COLORIZE_STYLE="colorful"
+export HOMEBREW_NO_AUTO_UPDATE=true

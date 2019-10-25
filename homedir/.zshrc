@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
+eval $(thefuck --alias)
 
 # if you want to use this, change your non-ascii font to Droid Sans Mono for Awesome
 # POWERLEVEL9K_MODE='awesome-patched'
@@ -43,7 +44,7 @@ plugins=(
   vscode
   tmux
   osx
-  vi-mode
+  #vi-mode
   zsh_reload
   zsh-navigation-tools
   zsh-syntax-highlighting
@@ -92,3 +93,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/usr/local/opt/maven@3.3/bin:$PATH"

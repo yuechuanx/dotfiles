@@ -176,6 +176,10 @@ alias mmm='python manage.py makemigrations && python manage.py migrate'
 # my alias and function
 # ------------------------------------
 # set commands function
+
+alias ssh-work='ssh xiao@192.168.199.231'
+
+
 function cd {
   builtin cd "$@" && ls -F
 }
