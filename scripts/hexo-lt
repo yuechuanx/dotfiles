@@ -1,0 +1,2 @@
+cd /Users/xiaoy/Hexo
+hexo clean && hexo g && hexo s

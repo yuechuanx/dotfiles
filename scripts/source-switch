@@ -1,0 +1,39 @@
+cd "$(brew --repo)"
+echo 'change dirs to: ' && pwd
+
+# official source
+# git remote set-url origin https://github.com/Homebrew/brew.git
+git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+echo 'git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git'
+
+cd
+echo 'change dirs to: ' && pwd
+brew update
+echo 'do brew update'
+
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+echo 'change dirs to: ' && pwd
+
+# official source
+# git remote set-url origin https://github.com/Homebrew/homebrew-core.git
+git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+echo 'git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git'
+
+cd
+echo 'change dirs to: ' && pwd
+brew update
+echo 'do brew update'
+
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-science"
+echo 'change dirs to: ' && pwd
+
+git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-science.git
+echo 'git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-science.git'
+
+cd
+echo 'change dirs to: ' && pwd
+brew update
+echo 'do brew update'
+
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc

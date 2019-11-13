@@ -1,0 +1,8 @@
+mac_addr=$(date +%y:%m:%d:%T)
+echo 'MAC will set to be' + $mac_addr
+
+ifconfig eth0 down
+ifconfig eth0 hw ether $mac_addr
+ifconfig eth0 up
+
+/usr/sbin/udhcpc -b -i eht0 -s /etc/udhcpc.seript -x lease:300&
