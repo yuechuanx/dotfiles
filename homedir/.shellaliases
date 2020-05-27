@@ -3,6 +3,8 @@
 #################################
 # Simple Program Name Shortening
 alias g=git
+alias h="sudo htop"
+
 
 #############################
 # Utilities
@@ -159,12 +161,10 @@ dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 # Conda alias and function
 # ------------------------------------
 alias deact='conda deactivate'
-alias py37='deact && conda activate py37'
-alias py36='deact && conda activate py36'
-alias py35='deact && conda activate py35'
-alias py27='deact && conda activate py27'
 alias base='deact && conda activate base'
 alias tf='deact && conda activate tf'
+alias dj22='deact && conda activate dj22'
+alias dj30='deact && conda activate dj30'
 
 # ------------------------------------
 # Django alias and function
@@ -177,8 +177,13 @@ alias mmm='python manage.py makemigrations && python manage.py migrate'
 # ------------------------------------
 # set commands function
 
-alias ssh-work='ssh xiao@192.168.199.231'
-
+alias swk='ssh xiao@192.168.199.231'
+alias spi='ssh pi@192.168.199.113'
+alias sm='ssh root@master'
+alias s1='ssh root@node-01'
+alias s2='ssh root@node-02'
+alias s3='ssh root@node-03'
+alias s4='ssh root@node-04'
 
 function cd {
   builtin cd "$@" && ls -F
@@ -189,3 +194,9 @@ function mkcd {
 }
 
 alias chk-als='alias | grep '
+alias _pip='python -m pip'
+
+alias start-psql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias stop-psql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop -s -m fast'
+alias status-psql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log status'
+

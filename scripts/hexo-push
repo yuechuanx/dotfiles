@@ -1,2 +1,1 @@
-cd /Users/xiaoy/Hexo
-hexo g && hexo d
+hexo g && hexo d && hexo clean

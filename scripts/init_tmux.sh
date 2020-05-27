@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # 该脚本用于开机初始化tmux服务
 #
 # tmux new -s init -d # 后台创建一个名称为init的会话

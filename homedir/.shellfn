@@ -127,4 +127,7 @@ function fo() {
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
-
+# show most use commands top n
+function topncmds() {
+    history | awk '{print $2}' | sort | uniq -c | sort -rn | head -$1
+}

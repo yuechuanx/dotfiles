@@ -1,9 +1,0 @@
-#!/usr/bin/expect
-
-set timeout 3
-spawn ssh xiao@192.168.199.98 -p 2222
-expect {
-    "*(yes/no)? " {send "yes\r"; exp_continue}
-    "*password: " {send "ebadde\r"}
-}
-interact
